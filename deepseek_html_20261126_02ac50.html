@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tina Zeng — Instructor, Emcee, Event Producer</title>
+<meta name="description" content="Zeng Nga Ting (Tina) — Global Operations Management student at CityU Hong Kong. I teach media literacy and STEM workshops, host large-scale events, and produce student-facing content.">
+
+<!-- Link previews -->
+<meta property="og:title" content="Tina Zeng — Instructor, Emcee, Event Producer">
+<meta property="og:description" content="Teaching, hosting and organising — turning workshops and events into moments people remember.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #fbf8f4;
+    --bg-alt: #f4efe8;
+    --card: #ffffff;
+    --text: #1c1a17;
+    --muted: #6b645c;
+    --accent: #c2410c;
+    --accent-soft: #fbe9e0;
+    --border: #e7dfd5;
+    --shadow: 0 1px 2px rgba(28, 26, 23, .04), 0 8px 24px -12px rgba(28, 26, 23, .12);
+  }
+
+  [data-theme="dark"] {
+    --bg: #14110f;
+    --bg-alt: #1a1614;
+    --card: #1d1917;
+    --text: #f2ede8;
+    --muted: #a8a09a;
+    --accent: #fb923c;
+    --accent-soft: #2a1c14;
+    --border: #2e2823;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .6);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+                 Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    transition: background .25s ease, color .25s ease;
+  }
+
+  .wrap { width: min(100% - 2.5rem, 880px); margin-inline: auto; }
+
+  a { color: var(--accent); }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* ---------- Type ---------- */
+  h1, h2, h3 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    gap: 1rem;
+  }
+
+  .brand {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .nav { display: flex; align-items: center; gap: 1.15rem; }
+
+  .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: .9rem;
+  }
+  .nav a:hover { color: var(--text); }
+
+  .icon-btn {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    font-size: .9rem;
+    color: var(--text);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color .15s ease;
+  }
+  .icon-btn:hover { border-color: var(--accent); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 4.5rem 0 2.5rem; }
+
+  .hero-top {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    flex: none;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+    color: #fff;
+    font-family: ui-serif, Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+  }
+
+  .hero h1 {
+    margin: 0 0 .4rem;
+    font-size: clamp(2.1rem, 6vw, 3.2rem);
+  }
+
+  .hero .full-name {
+    margin: 0;
+    font-size: .95rem;
+    color: var(--muted);
+    letter-spacing: .01em;
+  }
+
+  .tagline {
+    max-width: 52ch;
+    margin: 0 0 2rem;
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+  .tagline strong { color: var(--text); font-weight: 600; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .65rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-size: .92rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-ghost { border-color: var(--border); color: var(--text); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ---------- Stat strip ---------- */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1px;
+    margin: 3rem 0 0;
+    padding: 0;
+    list-style: none;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .stats li {
+    padding: 1.25rem 1.1rem;
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+  }
+
+  .stat-num {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: .78rem;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding: 3.25rem 0; }
+
+  section h2 {
+    margin: 0 0 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .prose p {
+    margin: 0 0 1rem;
+    max-width: 62ch;
+    color: var(--muted);
+  }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose strong { color: var(--text); font-weight: 600; }
+
+  /* ---------- "What I do" cards ---------- */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+  }
+
+  .pillar {
+    padding: 1.4rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+  }
+
+  .pillar .num {
+    display: block;
+    margin-bottom: .75rem;
+    font-family: ui-serif, Georgia, serif;
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: .06em;
+  }
+
+  .pillar h3 { margin: 0 0 .5rem; font-size: 1.05rem; }
+
+  .pillar p {
+    margin: 0;
+    font-size: .9rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ---------- Timeline ---------- */
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 1.5px solid var(--border);
+  }
+
+  .timeline > li {
+    position: relative;
+    padding-bottom: 2.25rem;
+  }
+  .timeline > li:last-child { padding-bottom: 0; }
+
+  .timeline > li::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.5rem - 5.5px);
+    top: .55rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+  }
+
+  .job-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .25rem .6rem;
+    margin-bottom: .15rem;
+  }
+
+  .job-title {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .job-date {
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .job-org {
+    margin: 0 0 .75rem;
+    font-size: .9rem;
+    color: var(--muted);
+  }
+
+  .job-list {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  .job-list li {
+    margin-bottom: .45rem;
+    font-size: .9rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .job-list li:last-child { margin-bottom: 0; }
+  .job-list li::marker { color: var(--accent); }
+
+  /* ---------- Two-up cards (activities) ---------- */
+  .duo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.4rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+  }
+
+  .card h3 {
+    margin: 0 0 .25rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .card .card-date {
+    margin: 0 0 .7rem;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+    color: var(--accent);
+  }
+
+  .card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  .card li {
+    margin-bottom: .4rem;
+    font-size: .9rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .card li:last-child { margin-bottom: 0; }
+  .card li::marker { color: var(--accent); }
+
+  /* ---------- Awards ---------- */
+  .awards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: .5rem;
+  }
+
+  .awards li {
+    display: flex;
+    align-items: baseline;
+    gap: .85rem;
+    padding: .9rem 1.1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: .92rem;
+    line-height: 1.5;
+  }
+
+  .awards .dot {
+    flex: none;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .awards .award-text { flex: 1; }
+
+  .awards .award-year {
+    flex: none;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+    color: var(--muted);
+  }
+
+  /* ---------- Skills ---------- */
+  .skill-group { margin-bottom: 1.75rem; }
+  .skill-group:last-child { margin-bottom: 0; }
+
+  .skill-group h3 {
+    margin: 0 0 .8rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .chips li {
+    padding: .4rem .85rem;
+    font-size: .85rem;
+    color: var(--text);
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+  }
+
+  .chips li.learning { color: var(--muted); border-style: dashed; }
+
+  /* ---------- Contact ---------- */
+  .contact-box {
+    padding: 2rem;
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+    border-radius: 16px;
+  }
+
+  [data-theme="dark"] .contact-box {
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+
+  .contact-box h2 { margin-top: 0; margin-bottom: .75rem; }
+
+  .contact-box p {
+    margin: 0 0 1.5rem;
+    max-width: 52ch;
+    font-size: .95rem;
+    color: var(--muted);
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+  }
+
+  .contact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .55rem 1rem;
+    font-size: .88rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    transition: border-color .15s ease, color .15s ease, transform .15s ease;
+  }
+
+  .contact-links a:hover {
+    transform: translateY(-1px);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* ---------- Footer ---------- */
+  .site-footer {
+    padding: 2rem 0 3rem;
+    border-top: 1px solid var(--border);
+    font-size: .82rem;
+    color: var(--muted);
+  }
+
+  .site-footer .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .5rem;
+  }
+
+  .site-footer a { color: var(--muted); }
+  .site-footer a:hover { color: var(--accent); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 620px) {
+    .nav { gap: .75rem; }
+    .nav a { font-size: .82rem; }
+    .hero { padding: 3rem 0 2rem; }
+    .hero-top { gap: 1.1rem; margin-bottom: 1.4rem; }
+    .avatar { width: 76px; height: 76px; font-size: 1.6rem; }
+    .contact-box { padding: 1.5rem; }
+    .stats { margin-top: 2rem; }
+  }
+
+  @media (max-width: 420px) {
+    .nav a:not(.nav-cta) { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      transition-duration: .01ms !important;
+    }
+  }
+</style>
+</head>
+<body id="top">
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Tina Zeng</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#activities">Activities</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle colour theme">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero wrap">
+    <div class="hero-top">
+      <!-- Swap this div for: <img class="avatar" src="photo.jpg" alt="Portrait of Tina Zeng"> -->
+      <div class="avatar" aria-hidden="true">TZ</div>
+      <div>
+        <h1>Tina Zeng</h1>
+        <p class="full-name">Zeng Nga Ting · Hong Kong</p>
+      </div>
+    </div>
+
+    <p class="tagline">
+      I <strong>teach</strong>, <strong>host</strong>, and <strong>organise</strong> —
+      turning workshops and events into moments people actually remember.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="#contact">Get in touch</a>
+      <a class="btn btn-ghost" href="CV.pdf" download>Download CV</a>
+    </div>
+
+    <ul class="stats">
+      <li>
+        <span class="stat-num">4.9/5</span>
+        <span class="stat-label">Event satisfaction rating</span>
+      </li>
+      <li>
+        <span class="stat-num">150+</span>
+        <span class="stat-label">Participants per competition run</span>
+      </li>
+      <li>
+        <span class="stat-num">4</span>
+        <span class="stat-label">Scholarships &amp; academic prizes</span>
+      </li>
+      <li>
+        <span class="stat-num">7.0</span>
+        <span class="stat-label">IELTS · English proficiency</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="wrap">
+    <p class="eyebrow">About</p>
+    <h2>Front of the room, behind the scenes</h2>
+
+    <div class="prose">
+      <p>
+        I'm a third-year <strong>Global Operations Management</strong> student at
+        City University of Hong Kong, and most of my week happens somewhere between
+        a classroom and a stage. I run journalism, media-literacy and STEM workshops
+        for primary and secondary students, emcee competitions with hundreds of
+        participants, and pick up the operational slack behind large university events.
+      </p>
+      <p>
+        The thread through all of it is <strong>making things run smoothly for other
+        people</strong> — breaking a complicated idea into something a ten-year-old can
+        actually enjoy, keeping a schedule on track when a microphone dies, or making
+        sure a nervous participant backstage feels steady before they walk on.
+        I studied operations, but I practise it in rooms full of people.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= WHAT I DO ================= -->
+  <section class="wrap">
+    <p class="eyebrow">What I do</p>
+    <h2>Three things, mostly</h2>
+
+    <div class="pillars">
+      <article class="pillar">
+        <span class="num">01</span>
+        <h3>Teaching &amp; facilitation</h3>
+        <p>
+          Leading media-literacy, KOL training, Reels production and STEM workshops —
+          adapting the same content for different ages, paces and confidence levels.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <span class="num">02</span>
+        <h3>Events &amp; hosting</h3>
+        <p>
+          Emceeing music, dance and mathematics competitions of 150+ participants,
+          and coordinating the logistics, stage flow and crisis management behind them.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <span class="num">03</span>
+        <h3>Content &amp; media</h3>
+        <p>
+          Creating student-facing content and supporting video, Reels and
+          fact-checking production — from concept through to final edit.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2>Where I've worked</h2>
+
+    <ol class="timeline">
+
+      <li>
+        <div class="job-head">
+          <h3 class="job-title">Freelance Instructor, Content Creator &amp; Event Ambassador</h3>
+          <span class="job-date">Sep 2026 — Present</span>
+        </div>
+        <p class="job-org">HK01 Education</p>
+        <ul class="job-list">
+          <li>Deliver journalism and media-literacy programmes for primary and secondary students, including KOL Training, Reels Production and Fact-Checking workshops.</li>
+          <li>Guide hands-on activities, breaking complex concepts into digestible lessons while keeping the classroom energetic and safe.</li>
+          <li>Adapt teaching style to different age groups and learning paces to sustain participation and comprehension.</li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="job-head">
+          <h3 class="job-title">Freelance Teaching Assistant &amp; Instructor</h3>
+          <span class="job-date">Mar 2026 — Present</span>
+        </div>
+        <p class="job-org">Coxana Innovation Limited</p>
+        <ul class="job-list">
+          <li>Support interactive STEM workshops: Hula Drone programming for primary students and Robotic Dog courses for secondary students.</li>
+          <li>Coach students through coding logic and hardware setup, providing real-time troubleshooting on flight paths and robotic manoeuvres.</li>
+          <li>Maintain classroom management and operational safety while reinforcing core technology concepts.</li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="job-head">
+          <h3 class="job-title">Freelance Emcee &amp; Event Helper</h3>
+          <span class="job-date">Jan 2026 — Present</span>
+        </div>
+        <p class="job-org">First Education Group</p>
+        <ul class="job-list">
+          <li>Run end-to-end operations for large-scale music, dance and mathematics competitions with 150+ participants each — setup, check-in, stage flow and teardown.</li>
+          <li>Handle real-time crises such as last-minute absences, microphone and audio failures, and schedule delays without disrupting the experience.</li>
+          <li>Adapt scripts on the spot, reassure nervous participants backstage, and coordinate with judges and crew to keep things professional under pressure.</li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="job-head">
+          <h3 class="job-title">Campus Intern — Career and Leadership Centre</h3>
+          <span class="job-date">Jul 2025 — May 2026</span>
+        </div>
+        <p class="job-org">City University of Hong Kong</p>
+        <ul class="job-list">
+          <li>Managed a high-volume central telephone line, recording each caller's enquiry and routing concise summaries to the responsible staff.</li>
+          <li>Collaborated on large-scale university events including the EMP Kick-off Ceremony and Career Expo — logistics planning, materials and on-site coordination.</li>
+        </ul>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ================= ACTIVITIES ================= -->
+  <section id="activities" class="wrap">
+    <p class="eyebrow">Beyond the classroom</p>
+    <h2>Leadership &amp; community</h2>
+
+    <div class="duo">
+
+      <article class="card">
+        <h3>Peer Counsellor</h3>
+        <p class="card-date">City University of Hong Kong · Sep 2025 — Sep 2026</p>
+        <ul>
+          <li>Organised campus-wide stress-relief events, owning every stage from proposal and budgeting to live operation and post-event feedback.</li>
+          <li>Achieved an average satisfaction rating of <strong>4.9 out of 5</strong> from participant feedback.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Team Coordinator — Summer Exchange</h3>
+        <p class="card-date">University of Victoria, Canada · May — Jul 2025</p>
+        <ul>
+          <li>Primary liaison between CityU, the host university and student participants, keeping communication and logistics running smoothly.</li>
+          <li>Coordinated student photographers, videographers, vloggers and KOLs to deliver their assigned work.</li>
+          <li>Fostered an inclusive environment, supporting onboarding and team cohesion across the cohort.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= AWARDS ================= -->
+  <section id="awards" class="wrap">
+    <p class="eyebrow">Recognition</p>
+    <h2>Scholarships &amp; prizes</h2>
+
+    <ul class="awards">
+      <li>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="award-text">KLN Logistics Group Scholarship — Global Service-Learning Programmes</span>
+        <span class="award-year">2025–26</span>
+      </li>
+      <li>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="award-text">Taxieco New World Limited Scholarship</span>
+        <span class="award-year">2025–26</span>
+      </li>
+      <li>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="award-text">Department of Decision Analytics and Operations Outstanding Student Prize &amp; Scholarship</span>
+        <span class="award-year">2025–26</span>
+      </li>
+      <li>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="award-text">Wong To Yick Tong Exchange Scholarship</span>
+        <span class="award-year">2025–26</span>
+      </li>
+      <li>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="award-text">Dean's List — CityUHK, Semester A &amp; B</span>
+        <span class="award-year">2025–26</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="wrap">
+    <p class="eyebrow">Toolkit</p>
+    <h2>Languages &amp; skills</h2>
+
+    <div class="skill-group">
+      <h3>Languages</h3>
+      <ul class="chips">
+        <li>Cantonese — native</li>
+        <li>Mandarin — native</li>
+        <li>Taiwanese — native</li>
+        <li>English — proficient, IELTS 7.0</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <h3>Tools</h3>
+      <ul class="chips">
+        <li>Microsoft Word</li>
+        <li>Excel</li>
+        <li>PowerPoint</li>
+        <li>Canva</li>
+        <li>Video editing</li>
+        <li>AI tools</li>
+        <li class="learning">Power BI — learning</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <h3>In the room</h3>
+      <ul class="chips">
+        <li>Workshop facilitation</li>
+        <li>Emceeing &amp; public speaking</li>
+        <li>Event logistics</li>
+        <li>Crisis management</li>
+        <li>Classroom management</li>
+        <li>Stakeholder coordination</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="wrap">
+    <div class="contact-box">
+      <h2>Let's work together</h2>
+      <p>
+        I'm open to freelance workshop instruction, event hosting and coordination
+        work — and always happy to chat about a project, a collaboration, or a
+        programme that needs someone in front of the room.
+      </p>
+
+      <div class="contact-links">
+        <!-- EDIT: add your real profile URLs -->
+        <a href="mailto:ntzeng2-c@my.cityu.edu.hk">✉︎ Email</a>
+        <a href="CV.pdf" download>↓ CV (PDF)</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year"></span> Zeng Nga Ting (Tina)</span>
+    <span><a href="#top">Back to top ↑</a></span>
+  </div>
+</footer>
+
+<script>
+  // ---- Theme toggle (respects OS preference, remembers choice) ----
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+
+  function syncIcon() {
+    toggle.textContent = root.dataset.theme === 'dark' ? '☀️' : '🌙';
+  }
+  syncIcon();
+
+  toggle.addEventListener('click', () => {
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', root.dataset.theme);
+    syncIcon();
+  });
+
+  // ---- Footer year ----
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
